@@ -97,6 +97,15 @@ func main() {
 			},
 			Params: map[string]string{"url": "Endpoint url to call", "payload": "Payload to send in json format", "headers": "Array of headers to send"},
 		},
+		"put": bottalk.Action{
+			Name:        "put",
+			Description: "This performs PUT-request to remote endpoint",
+			Endpoint:    "/put",
+			Action: func(r *http.Request) string {
+				return doAction("put", r)
+			},
+			Params: map[string]string{"url": "Endpoint url to call", "payload": "Payload to send in json format", "headers": "Array of headers to send"},
+		},
 		"delete": bottalk.Action{
 			Name:        "delete",
 			Description: "This performs DELETE-request to remote endpoint",
